@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+<<<<<<< HEAD
+  th:replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}"
+=======
+  data-th-replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}"
+>>>>>>> 001bdaa (upload again due to some error)
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title data-th-text="${loggedInUser.name}+' | SCM Dashboard'">Dashboard page</title>
+  </head>
+  <body>
+
+<<<<<<< HEAD
+    <div  id="content">
+
+          <!-- SideBar content for the loggedInUsers -->
+       <div data-th-if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+        </div>
+
+        <div class="sm:pl-64 pt-20">
+            <div class="flex justify-center flex-col items-center">
+              <h1 class="text-5xl">This is Dashboard page</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+                ratione.
+              </p>
+            </div>
+          </div>
+
+    </div>
+    
+=======
+  <div id="content">
+      <!-- Sidebar content for the loggedInUsers -->
+      <div data-th-if="${loggedInUser}">
+          <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <!-- Main Dashboard Content -->
+      <div class="sm:pl-64 pt-20 bg-gray-100 min-h-screen">
+          <!-- Welcome Banner -->
+          <div class="bg-blue-600 text-white py-6 px-10 rounded-md shadow-md mb-8">
+              <h2 class="text-3xl font-bold">Welcome to Your Dashboard</h2>
+              <p class="text-sm mt-2">Here's a quick summary of your activities and features to explore.</p>
+          </div>
+
+          <!-- Dashboard Features -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Overview Panel -->
+              <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                  <h3 class="text-xl font-bold mb-4">Overview</h3>
+                  <ul class="text-sm text-gray-600 space-y-2">
+                      <li>Total Contacts Saved: <span class="font-semibold">120</span></li>
+                      <li>Recently Added: <span class="font-semibold">John Doe</span></li>
+                      <li>Most Contacted: <span class="font-semibold">Jane Smith</span></li>
+                  </ul>
+                  <div class="mt-4">
+                      <a data-th-href="@{/user/contacts}"><button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">View Details</button></a>
+                  </div>
+              </div>
+
+              <!-- Quick Actions -->
+              <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                  <h3 class="text-xl font-bold mb-4">Quick Actions</h3>
+                  <div class="flex flex-wrap gap-4">
+                     <a data-th-href="@{/user/contacts/add}">
+                         <button class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">
+                             Add Contact
+                         </button>
+                     </a>
+
+                      <a data-th-href="@{/user/contacts}">
+                          <button class="bg-indigo-500 text-white py-2 px-4 rounded-lg hover:bg-indigo-600">
+                              Search Contacts
+                          </button>
+                      </a>
+
+                  </div>
+                  <p class="text-sm text-gray-600 mt-4">Use QR codes to share contacts easily.</p>
+              </div>
+
+              <!-- Activity Feed -->
+              <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                  <h3 class="text-xl font-bold mb-4">Activity Feed</h3>
+                  <ul class="text-sm text-gray-600 space-y-2">
+                      <li><span class="font-semibold">Added:</span> John Doe on June 25</li>
+                      <li><span class="font-semibold">Updated:</span> Jane Smith's email</li>
+                      <li><span class="font-semibold">Deleted:</span> Mark Robinson</li>
+                  </ul>
+                  <div class="mt-4">
+                      <button class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600">
+                          View All Activities
+                      </button>
+                  </div>
+              </div>
+
+              <!-- Placeholder for Charts -->
+              <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition col-span-1 md:col-span-2">
+                  <h3 class="text-xl font-bold mb-4">Contact Insights</h3>
+                  <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500">
+                      Placeholder for Charts
+                  </div>
+              </div>
+
+              <!-- Smart Search Bar -->
+              <div class="col-span-1 md:col-span-2 lg:col-span-3">
+                  <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                      <h3 class="text-xl font-bold mb-4">Smart Search</h3>
+                      <div class="flex items-center gap-4">
+                          <input
+                                  type="text"
+                                  placeholder="Search by name, tags, or categories"
+                                  class="w-full border border-gray-300 rounded-lg py-2 px-4 focus:ring-blue-500 focus:border-blue-500"
+                          />
+                          <button class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">
+                              Search
+                          </button>
+                      </div>
+                      <p class="text-sm text-gray-600 mt-2">Try advanced filters or recent searches.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+>>>>>>> 001bdaa (upload again due to some error)
+
+    <script>
+      console.log("This is profile page");
+    </script>
+  </body>
+</html>

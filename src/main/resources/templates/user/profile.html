@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html
+<<<<<<< HEAD
+  lang="en"
+  th:replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title data-th-text="${loggedInUser.name}+' | SCM Profile'"></title>
+  </head>
+  <body>
+
+    <div  id="content">
+
+          <!-- SideBar content for the loggedInUsers -->
+       <div data-th-if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+        </div>
+
+        <div class="sm:pl-64 pt-20">
+            <div class="flex flex-col justify-center md:pt-28 items-center">
+              <!-- Profile card  -->
+              <div class="max-w-2xl w-full rounded overflow-hidden shadow-lg p-6 bg-white">
+                <!-- Profile Picture -->
+                <div class="flex justify-center mb-4">
+                    <img
+                        onerror="this.onerror=null, this.src='https://static-00.iconduck.com/assets.00/profile-default-icon-2048x2045-u3j7s5nj.png'"
+                        th:src="@{${loggedInUser.profilPic}}"
+                        src="https://flowbite.com/docs/images/logo.svg"
+                        class="h-44 w-auto rounded-full object-cover"
+                        alt="User Pic"
+                    />
+                </div>
+                
+                <!-- User Information -->
+                <div class="text-center">
+                    <h2 class="text-xl font-bold mb-2" th:text="${loggedInUser.name}">User Name</h2>
+                    <p class="text-gray-600" th:text="${loggedInUser.about}">About the user</p>
+                </div>
+                
+                <div class="mt-4">
+                    <ul class="text-gray-700">
+                        <li class="mb-2">
+                            <strong>Email:</strong>
+                            <span th:text="${loggedInUser.email}">user@example.com</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Phone:</strong>
+                            <span th:text="${loggedInUser.phoneNumber}">(123) 456-7890</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>User ID:</strong>
+                            <span th:text="${loggedInUser.userId}">UserID12345</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Email Verified:</strong>
+                            <span th:text="${loggedInUser.emailVerified ? 'Yes' : 'No'}">No</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Phone Verified:</strong>
+                            <span th:text="${loggedInUser.phoneVerified ? 'Yes' : 'No'}">No</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Enabled:</strong>
+                            <span th:text="${loggedInUser.enabled ? 'Yes' : 'No'}">No</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Provider:</strong>
+                            <span th:text="${loggedInUser.provider}">SELF</span>
+                        </li>
+                        <li class="mb-2">
+                            <strong>Provider User ID:</strong>
+                            <span th:text="${loggedInUser.providerUserId}">ProviderUserID123</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+          </div>
+
+    </div>
+    
+
+    <script>
+      console.log("This is profile page");
+    </script>
+  </body>
+=======
+        lang="en"
+        data-th-replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}"
+>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-th-text="${loggedInUser.name}+' | SCM Profile'"></title>
+</head>
+
+<body class="bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 text-white">
+<div id="content">
+    <!-- SideBar content for the loggedInUsers -->
+    <div data-th-if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+    </div>
+
+    <div class="sm:pl-64 pt-20">
+        <div class="flex justify-center pt-10">
+            <!-- Profile Card -->
+            <div class="bg-white text-gray-800 w-full max-w-2xl rounded-lg shadow-lg p-6">
+                <!-- Profile Picture -->
+                <div class="flex justify-center mb-4">
+                    <img
+                            onerror="this.onerror=null; this.src='https://static-00.iconduck.com/assets.00/profile-default-icon-2048x2045-u3j7s5nj.png'"
+                            data-th-src="${loggedInUser.profilePic}"
+                            alt="User Pic"
+                            class="h-28 w-28 rounded-full border-4 border-indigo-600 shadow-lg object-cover"
+                    />
+                </div>
+
+                <!-- User Information -->
+                <div class="text-center">
+                    <h2
+                            class="text-2xl font-semibold mb-1"
+                            data-th-text="${loggedInUser.name}"
+                    >
+                        User Name
+                    </h2>
+                    <p class="text-gray-500 mb-4" data-th-text="${loggedInUser.about}">
+                        About the user
+                    </p>
+                </div>
+
+                <!-- Info List -->
+                <ul class="space-y-3">
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Email:</strong>
+                        <span data-th-text="${loggedInUser.email}">user@example.com</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Phone:</strong>
+                        <span data-th-text="${loggedInUser.phoneNumber}">(123) 456-7890</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>User ID:</strong>
+                        <span data-th-text="${loggedInUser.userId}">UserID12345</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Email Verified:</strong>
+                        <span data-th-text="${loggedInUser.emailVerified ? 'Yes' : 'No'}">No</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Phone Verified:</strong>
+                        <span data-th-text="${loggedInUser.phoneVerified ? 'Yes' : 'No'}">No</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Enabled:</strong>
+                        <span data-th-text="${loggedInUser.enabled ? 'Yes' : 'No'}">No</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Provider:</strong>
+                        <span data-th-text="${loggedInUser.provider}">SELF</span>
+                    </li>
+                    <li class="flex justify-between items-center bg-gray-100 p-3 rounded-lg">
+                        <strong>Provider User ID:</strong>
+                        <span
+                                data-th-text="${loggedInUser.providerUserId}"
+                        >ProviderUserID123</span
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+>>>>>>> 001bdaa (upload again due to some error)
+</html>

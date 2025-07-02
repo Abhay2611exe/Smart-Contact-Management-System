@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+    <title>Service page</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to the service page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, non incidunt. Deserunt porro rem quos eligendi vitae beatae dolores, unde distinctio minus, cum dolore aliquid magnam corrupti, ut tempora mollitia.</p>
+    </div>
+</body>
+</html>
+=======
+<html lang="en" data-th-replace="~{base :: parent(~{::#content}, ~{::title}, ~{})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Service Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="content" class="p-6 space-y-8">
+    <section class="text-center py-12">
+        <h1 class="text-4xl font-bold text-blue-600 animate-fade-in">Our Services</h1>
+        <p class="mt-4 text-lg text-gray-600">
+            At <span class="font-semibold">Smart Contact Manager</span>, we provide a range of services to ensure managing your contacts is effortless, secure, and comprehensive. From seamless storage to advanced features, we’ve got you covered.
+        </p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-2xl font-bold text-blue-500 mb-4">What We Offer</h2>
+            <ul class="list-disc list-inside text-gray-700">
+                <li class="mb-2"><strong>Secure Contact Storage:</strong> Top-notch encryption and reliable storage solutions.</li>
+                <li class="mb-2"><strong>Smart Categorization:</strong> Group your contacts into custom categories.</li>
+                <li class="mb-2"><strong>Cross-Device Accessibility:</strong> Access your contacts from any device.</li>
+                <li class="mb-2"><strong>Data Synchronization:</strong> Sync across platforms seamlessly.</li>
+                <li class="mb-2"><strong>Backup & Restore:</strong> Keep your contacts safe and retrievable.</li>
+                <li class="mb-2"><strong>Advanced Search & Filtering:</strong> Find contacts in seconds.</li>
+                <li class="mb-2"><strong>Customizable Settings:</strong> Tailor the system to your needs.</li>
+                <li><strong>Enhanced Data Security:</strong> Robust measures to protect your data.</li>
+            </ul>
+        </div>
+        <div>
+            <img src="image/service.webp" alt="Services" class="rounded-lg shadow-lg transform hover:scale-105 transition duration-300" />
+        </div>
+    </section>
+
+    <section class="py-12 bg-blue-600 text-white rounded-lg">
+        <h2 class="text-3xl font-bold text-center">Why Choose Our Services?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">Efficiency at Your Fingertips</h3>
+                <p>Simplify your workflow with intuitive tools.</p>
+            </div>
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">Stay Organized</h3>
+                <p>Say goodbye to scattered data and lost contacts.</p>
+            </div>
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                <h3 class="text-xl font-bold text-blue-500 mb-2">Reliability You Can Trust</h3>
+                <p>Enjoy consistent performance and peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Service Metrics</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <canvas id="servicePieChart" class="max-w-md mx-auto"></canvas>
+            </div>
+            <div>
+                <canvas id="userGrowthBarChart" class="max-w-md mx-auto"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-12 bg-gray-100 py-6 text-center text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+        <p>&copy; 2025 Smart Contact Manager. All rights reserved.</p>
+        <p>Created by <a href="#" class="text-blue-600 hover:underline">@Abhay_Singh</a></p>
+    </footer>
+</div>
+
+<script>
+    // Log confirmation messages to verify initialization
+    console.log('Initializing Service Metrics Charts');
+
+    // Pie Chart for Service Distribution
+    const servicePieCtx = document.getElementById('servicePieChart');
+    if (servicePieCtx) {
+        new Chart(servicePieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Storage', 'Search', 'Categorization', 'Backup'],
+                datasets: [{
+                    data: [40, 25, 20, 15],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#F44336', '#3B82F6'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    },
+                },
+            },
+        });
+        console.log('Service Pie Chart initialized successfully.');
+    } else {
+        console.error('Service Pie Chart canvas not found!');
+    }
+
+    // Bar Chart for User Growth
+    const userGrowthBarCtx = document.getElementById('userGrowthBarChart');
+    if (userGrowthBarCtx) {
+        new Chart(userGrowthBarCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'User Growth',
+                    data: [20, 40, 60, 80, 100, 120],
+                    backgroundColor: ['#4CAF50', '#FFC107', '#3B82F6', '#8E44AD', '#F1C40F', '#E74C3C'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Users',
+                        },
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Months',
+                        },
+                    },
+                },
+            },
+        });
+        console.log('User Growth Bar Chart initialized successfully.');
+    } else {
+        console.error('User Growth Bar Chart canvas not found!');
+    }
+</script>
+</body>
+</html>
+>>>>>>> 001bdaa (upload again due to some error)

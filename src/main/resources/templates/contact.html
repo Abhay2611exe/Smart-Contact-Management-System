@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title},~{})}">
+<head>
+    <title>contact page</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to the contact page</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, non incidunt. Deserunt porro rem quos eligendi vitae beatae dolores, unde distinctio minus, cum dolore aliquid magnam corrupti, ut tempora mollitia.</p>
+    </div>
+</body>
+</html>
+=======
+<html lang="en" data-th-replace="~{base :: parent(~{::#content}, ~{::title},~{})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Contact Page</title>
+</head>
+<body>
+<div id="content" class="p-6 space-y-8">
+    <!-- Header -->
+    <section class="text-center py-12">
+        <h1 class="text-4xl font-bold text-blue-600 animate-fade-in">Contact Us</h1>
+        <p class="mt-4 text-lg text-gray-600">
+            We’re here to help you! Whether you have a question, need assistance, or just want to share your feedback, our team is always ready to connect with you.
+        </p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+            <h2 class="text-2xl font-bold text-blue-500 mb-4">Get in Touch</h2>
+            <ul class="list-none space-y-4 text-gray-700">
+                <li><strong>General Inquiries:</strong></li>
+                <li>✉ Email: <a href="mailto:your-email@gmail.com" class="text-blue-600 hover:underline">abhay2611.exe@gmail.com</a></li>
+                <li>📞 Phone: <a href="tel:+12345678900" class="text-blue-600 hover:underline">+91-8127-9061-66</a></li>
+                <li><strong>Customer Support:</strong></li>
+                <li>✉ Support Email: <a href="mailto:support@example.com" class="text-blue-600 hover:underline">support_scm2.0@gmail.com</a></li>
+                <li>📢 Live Chat: Available 24/7 (Click the chat icon at the bottom right of this page).</li>
+                <li><strong>Business Partnerships:</strong></li>
+                <li>✉ Partnerships: <a href="mailto:partnerships@example.com" class="text-blue-600 hover:underline">partnerships_scm2.0@example.com</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-bold text-blue-500 mb-4">Our Location</h2>
+            <p class="text-gray-700">
+                <strong>[SCM 2.0 PRIVATE LIMITED]</strong><br>
+                123 Smart Contact Avenue,<br>
+                Tech City, Innovation State, 56789<br>
+            </p>
+            <p class="text-gray-700">
+                <strong>Office Hours:</strong><br>
+                Monday – Friday: 9:00 AM – 6:00 PM<br>
+                Saturday: 10:00 AM – 2:00 PM<br>
+                Sunday: Closed
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-12">
+        <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Send Us a Message</h2>
+        <form class="max-w-2xl mx-auto space-y-4">
+            <div>
+                <label for="name" class="block text-gray-700">Name</label>
+                <input type="text" id="name" name="name" class="w-full p-2 border rounded-lg" placeholder="Your full name" required />
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700">Email</label>
+                <input type="email" id="email" name="email" class="w-full p-2 border rounded-lg" placeholder="Your email address" required />
+            </div>
+            <div>
+                <label for="subject" class="block text-gray-700">Subject</label>
+                <input type="text" id="subject" name="subject" class="w-full p-2 border rounded-lg" placeholder="Briefly state your purpose" required />
+            </div>
+            <div>
+                <label for="message" class="block text-gray-700">Message</label>
+                <textarea id="message" name="message" class="w-full p-2 border rounded-lg" rows="5" placeholder="Describe your query or feedback" required></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Follow Us Section -->
+    <section class="py-12 bg-blue-600 text-white rounded-lg">
+        <h2 class="text-3xl font-bold text-center">Follow Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 text-center">
+            <div>
+                <a href="https://facebook.com/yourpage" class="hover:underline" target="_blank">Facebook</a>
+            </div>
+            <div>
+                <a href="https://twitter.com/yourpage" class="hover:underline" target="_blank">Twitter</a>
+            </div>
+            <div>
+                <a href="https://linkedin.com/company/yourpage" class="hover:underline" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-12 bg-gray-100 py-6 text-center text-gray-600 dark:bg-gray-800 dark:text-gray-400">
+        <p>&copy; 2025 Smart Contact Manager. All rights reserved.</p>
+        <p>Created by <a href="#" class="text-blue-600 hover:underline">@Abhay_Singh</a></p>
+    </footer>
+</div>
+</body>
+</html>
+>>>>>>> 001bdaa (upload again due to some error)

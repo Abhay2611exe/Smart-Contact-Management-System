@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en" th:replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" data-th-href="@{'/css/output.css'}"> -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    <title>Error</title>
+</head>
+<body>
+
+    <div id="content" class="text-center mt-2 md:w-1/2 mx-auto">
+    <div th:replace="~{message :: messagebox}"></div>
+    <button class="px-3 py-2 bg-gray-400 text-center rounded hover:bg-gray-500">Login</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+    
+</html>
+=======
+<html lang="en" data-th-replace="~{base :: parent(~{::#content}, ~{::title},~{::script})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Error</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff6a6a, #ff9966);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .error-container {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .btn:hover {
+            background-color: #ff4b4b;
+        }
+    </style>
+</head>
+<body>
+<div id="content" class="text-center p-8 max-w-lg mx-auto bg-white rounded-xl shadow-lg error-container">
+    <!-- Error Icon -->
+    <div class="text-red-600 mb-4">
+        <i class="fas fa-exclamation-circle text-6xl"></i>
+    </div>
+
+    <!-- Error Message -->
+    <div data-th-replace="~{message :: messagebox}" class="mb-4">
+        <h1 class="text-2xl font-bold text-gray-800">Oops! Something went wrong.</h1>
+        <p class="text-gray-600 mt-2">We encountered an issue. Please try again or contact support if the issue persists.</p>
+    </div>
+
+    <!-- Button -->
+    <button
+            onclick="window.location.href='/login'"
+            class="mt-6 px-4 py-2 bg-red-600 text-white text-lg font-medium rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2 transition">
+        Return to Login
+    </button>
+
+    <!-- Optional Footer -->
+    <div class="mt-6 text-gray-600 text-sm">
+        <p>Need help? <a href="/support" class="text-red-600 hover:underline">Contact Support</a></p>
+    </div>
+</div>
+</body>
+</html>
+>>>>>>> 001bdaa (upload again due to some error)
